@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Processing</title>
+</head>
+<body>
+    <h1>Upload Image</h1>
+    <form action="{% url 'process_images' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="uploaded_image">
+        <button type="submit">Process Image</button>
+    </form>
+</body>
+</html>

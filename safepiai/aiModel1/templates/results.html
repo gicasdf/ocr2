@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>OCR Model Results</h1>
+
+    {% if results %}
+        {% for result in results %}
+            <div style="margin-bottom: 20px;">
+                <h2>Result Text</h2>
+                <p>{{ result.text }}</p>
+                <h2>Result Image</h2>
+                <img src="{{ result.image.url }}" alt="Result Image" style="max-width: 100%; height: auto;">
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No results available yet.</p>
+    {% endif %}
+</body>
+</html>
